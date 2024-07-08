@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
+rails new rails_todo --api --database=postgresql --skip-javascript --skip-test --skip-system-test --skip-action-mailer --skip-action-text --skip-action-cable --skip-active-storage --skip-asset-pipeline --skip-action-mailbox --skip-boostrap --skip-jquery --skip-turbo-rails
 
-Things you may want to cover:
+git push --set-upstream origin skip-all
 
-* Ruby version
+rails g scaffold Note titlee:string content: string
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
