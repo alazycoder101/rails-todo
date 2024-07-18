@@ -5,6 +5,8 @@ require "active_support/core_ext/integer/time"
 # your test database is "scratch space" for the test suite and is wiped
 # and recreated between test runs. Don't rely on the data there!
 
+track_changes ActiveJob::Base, :queue_adapter=
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -28,6 +30,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
+  config.active_job.queue_adapter = :inline
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
 
